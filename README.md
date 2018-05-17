@@ -16,7 +16,7 @@ docker run \
 -p 9999:2368 \
 -e url="http://localhost:9999" \
 -v "/home/karai/GitHub/landonmanning.com/content:/var/lib/ghost/content" \
--m 128m \
+-m 256m \
 --name landonmanning.com \
 ghost:latest
 ```
@@ -27,7 +27,7 @@ docker run \
 -p 9999:2368 \
 -e url="http://localhost:9999" \
 -v "C:\Users\karai\Documents\GitHub\landonmanning.com\content:/var/lib/ghost/content" \
--m 128m \
+-m 256m \
 --name landonmanning.com \
 ghost:latest
 ```
@@ -40,7 +40,7 @@ docker run \
 -p 2808:2368 \
 -e url="https://landonmanning.com" \
 -v "/var/www/landonmanning.com/content:/var/lib/ghost/content" \
--m 128m \
+-m 256m \
 --name landonmanning.com \
 ghost:latest
 ```
