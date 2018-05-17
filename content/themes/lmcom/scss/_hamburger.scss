@@ -1,5 +1,5 @@
 #hamburger-menu {
-	background-color: $charcoal;
+	background-color: $primary;
 
 	font-size:  $hamburger-text-size;
 	text-align: left;
@@ -19,7 +19,7 @@
 	}
 
 	ul {
-		color: $white;
+		color: $secondary;
 
 		list-style: none;
 
@@ -94,13 +94,13 @@
 	}
 }
 
-@media only screen and (max-width: $xl - 1) {
+@media only screen and (max-width: $lg - 1) {
 	body {
 		overflow-x: hidden;
 	}
 }
 
-@media only screen and (min-width: $xl) {
+@media only screen and (min-width: $lg) {
 	#hamburger-menu,
 	#hamburger {
 		display: none !important;

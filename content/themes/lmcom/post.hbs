@@ -1,5 +1,4 @@
 {{!< default}}
-<div id="buffer"></div>
 {{#post}}
 <section id="posts">
 	<div class="container">
@@ -17,12 +16,6 @@
 			<footer>
 				<div class="tags">
 					{{tags separator=' · ' prefix='- ' suffix=' -'}}
-				</div>
-				<div class="author">
-					{{#author}}
-						{{#if profile_image}}<img class="author-image" src="{{profile_image}}" alt="Author image" />{{/if}}
-						<address itemprop="author" itemscope itemtype="http://schema.org/Person"><a itemprop="name" href="{{url}}" rel="author">{{name}}</a></address>
-					{{/author}}
 				</div>
 			</footer>
 		</article>

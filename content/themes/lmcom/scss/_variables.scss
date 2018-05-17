@@ -22,18 +22,23 @@ $darken:  rgba(  0,   0,   0, 0.5);
 
 /* Color */
 $black:       #000000;
-$obsidian:    #131313;
-$charcoal:    #1c1c1c;
+$obsidian:    #130c13;
+$charcoal:    #222222;
 $grey-dark:   #777777;
 $grey-medium: #a7a7a7;
 $grey-light:  #e7e7e7;
 $white:       #ffffff;
 
+/* Palette */
+$primary:   $charcoal;
+$secondary: $white;
+$tertiary:  #cc00ff;
+
+
 /* Home Icon */
 $home-icon-radius:  $circle;
 $home-icon-size:    100px;
 $home-icon-padding:  25px;
-
 
 /* Home Icon */
 $service-icon-size: 200px;
@@ -46,7 +51,7 @@ $github:         #515151;
 $twitter:        #00aced;
 
 /* Top */
-$header-height: 40px;
+$header-height: 60px;
 
 /* Form */
 $form-font-family: $font-family;
@@ -59,8 +64,8 @@ $button-color:            $obsidian;
 $button-color-hover:      $obsidian;
 $button-padding:          $spacing / 2;
 $button-radius:           3px;
-$button-text-color:       $white;
-$button-text-color-hover: $white;
+$button-text-color:       $secondary;
+$button-text-color-hover: $secondary;
 $button-text-size:        1.2em;
 
 $input-border-top:          none;
@@ -71,7 +76,7 @@ $input-focus-border-top:    $input-border-top;
 $input-focus-border-right:  $input-border-top;
 $input-focus-border-bottom: $input-border-top;
 $input-focus-border-left:   $input-border-top;
-$input-color:               $white;
+$input-color:               $secondary;
 $input-margin:              $spacing;
 $input-padding:             5px 8px;
 $input-radius:              $button-radius;

@@ -1,14 +1,12 @@
 <header id="header">
 	<div class="container">
-		<a id="header-logo" href="/">LandonManning.com</a>
+		<a id="header-logo" href="{{navigation.home.url}}">
+			<img src="{{asset 'images/avatar.png'}}" alt="" />
+			<span>LandonManning.com</span>
+		</a>
 		<nav>
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/portfolio">Portfolio</a></li>
-				<li><a href="/resume">Resume</a></li>
-				<li><a href="/art">Art</a></li>
-				<li><a href="/contact">Contact</a></li>
+				{{navigation}}
 			</ul>
 		</nav>
 	</div>
