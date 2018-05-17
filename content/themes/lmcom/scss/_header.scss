@@ -1,0 +1,76 @@
+#header {
+	background-color: $charcoal;
+	box-shadow:       $shadow;
+
+	color: $white;
+
+	position: fixed;
+	top:      0;
+	width:    100%;
+	height:   $header-height;
+	z-index:  3;
+
+	.container {
+		flex-direction:  row;
+		align-items:     center;
+		justify-content: flex-end;
+
+		padding: 0;
+		padding-right: $spacing;
+
+		height: 100%;
+	}
+
+	#header-logo {
+		font-family:     "Trebuchet MS";
+		font-size:       1.3em;
+		font-variant:    small-caps;
+		font-weight:     100;
+		letter-spacing:  4px;
+		text-decoration: none;
+	}
+
+	nav {
+		display: none;
+
+		ul {
+			display: flex;
+			margin-bottom: 0;
+
+			li {
+				display:     flex;
+				align-items: center;
+
+				padding: 0 $spacing;
+
+				a, span {
+					color:           inherit;
+					text-decoration: none;
+
+					display: inline-block;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+
+				span {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $xl) {
+	#header {
+		.container {
+			justify-content: space-between;
+			padding-right: 0;
+		}
+
+		nav {
+			display: block;
+		}
+	}
+}

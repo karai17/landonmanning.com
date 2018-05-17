@@ -1,0 +1,117 @@
+#hamburger-menu {
+	background-color: $charcoal;
+
+	font-size:  $hamburger-text-size;
+	text-align: left;
+
+
+	position:  fixed;
+	top:       0;
+	left:     -$hamburger-menu-width;
+	width:     $hamburger-menu-width;
+	height:    100%;
+	z-index:   8;
+
+	transition: all $transition;
+
+	&.open {
+		left: 0;
+	}
+
+	ul {
+		color: $white;
+
+		list-style: none;
+
+		padding: 0;
+
+		position: relative;
+		top:      $header-height;
+
+		transition: all $transition;
+
+		li {
+			list-style: none;
+
+			padding: $spacing;
+
+			a {
+				color:           inherit;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.book-online {
+		display: inline-block;
+	}
+}
+
+#hamburger {
+	@extend .svg-hamburger;
+
+	cursor: pointer;
+
+	position: fixed;
+	top:      $spacing;
+	left:     $spacing;
+	width:    $header-height - $padding;
+	height:   $header-height - $padding;
+	z-index:  9;
+
+	transition: all $transition;
+}
+
+#content {
+	position: relative;
+	left:     0;
+
+	transition: all $transition;
+
+	&.open {
+		left: $hamburger-menu-width;
+	}
+}
+
+#overlay {
+	background-color: $darken;
+
+	visibility: hidden;
+	opacity:    0;
+
+	position: absolute;
+	top:      0;
+	left:     0;
+	width:    100%;
+	height:   100%;
+	z-index:  8;
+
+	transition: all $transition;
+
+	&.open {
+		visibility: visible;
+		opacity:    1;
+	}
+}
+
+@media only screen and (max-width: $xl - 1) {
+	body {
+		overflow-x: hidden;
+	}
+}
+
+@media only screen and (min-width: $xl) {
+	#hamburger-menu,
+	#hamburger {
+		display: none !important;
+	}
+
+	#overlay {
+		visibility: hidden !important;
+		opacity:    0      !important;
+	}
+
+	#content {
+		left: 0 !important;
+	}
+}

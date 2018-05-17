@@ -1,0 +1,19 @@
+{{!< default}}
+<div id="buffer"></div>
+{{#author}}
+<section id="posts">
+	<div class="container">
+		<article itemscope itemtype="http://schema.org/Article" class="post">
+			<header>
+				{{#if profile_image}}
+					<img itemprop="image" class="profile-image" src="{{profile_image}}" alt="" />
+				{{/if}}
+				<h1 itemprop="name">{{name}}</h1>
+			</header>
+			<section itemprop="articleSection">
+				{{bio}}
+			</section>
+		</article>
+	</div>
+</section>
+{{/author}}

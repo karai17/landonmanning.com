@@ -1,0 +1,97 @@
+/* https://typecast.com/blog/a-more-modern-scale-for-web-typography */
+
+body, h1, h2, h3, h4, h5, h6 {
+	font-size-adjust: 0.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family:  "Trebuchet MS";
+	font-variant: small-caps;
+	font-weight:  100;
+	text-align:   center;
+
+	margin-bottom: $spacing;
+}
+
+body {
+	font-family: $font-family;
+	line-height: 1.25em;
+}
+
+h1 {
+	font-size:   2.0em;
+	line-height: 1.25em;
+}
+
+h2 {
+	font-size:   1.625em;
+	line-height: 1.15384615em;
+}
+
+h3 {
+	font-size:   1.375em;
+	line-height: 1.13636364em;
+}
+
+h4 {
+	font-size:   1.125em;
+	line-height: 1.11111111em;
+}
+
+blockquote {
+	font-size:   1.25em;
+	line-height: 1.25em;
+}
+
+/* iPad */
+@media only screen and (min-width: $md) {
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: $padding;
+	}
+
+	body {
+		line-height: 1.375em;
+	}
+
+	h1 {
+		font-size:   2.5em;
+		line-height: 1.125em;
+	}
+
+	h2 {
+		font-size:   2.0em;
+		line-height: 1.25em;
+	}
+
+	h3 {
+		font-size:   1.5em;
+		line-height: 1.25em;
+	}
+
+	h4 {
+		line-height: 1.22222222em;
+	}
+
+	blockquote {
+		font-size:   1.5em;
+		line-height: 1.45833333em;
+	}
+}
+
+/* Desktop */
+@media only screen and (min-width: $xl) {
+	h1 {
+		font-size:   3.0em;
+		line-height: 1.05em;
+	}
+
+	h2 {
+		font-size:   2.25em;
+		line-height: 1.25em;
+	}
+
+	h3 {
+		font-size:   1.75em;
+		line-height: 1.25em;
+	}
+}

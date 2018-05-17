@@ -1,0 +1,46 @@
+{{!< default}}
+<div id="buffer"></div>
+{{#post}}
+<section id="posts">
+	<div class="container">
+		<article itemscope itemtype="http://schema.org/Article" class="post">
+			<header>
+				{{#if feature_image}}
+					<a href="{{url}}"><img itemprop="image" class="feature-image" src="{{feature_image}}" alt="" /></a>
+				{{/if}}
+				<h2 itemprop="name"><a href="{{url}}">{{title}}</a></h2>
+				<div>Posted on <time itemprop="datePublished" datetime="{{date format='YYYY-MM-DD'}}">{{date format='YYYY-MM-DD'}}</time></div>
+			</header>
+			<section itemprop="articleSection">
+				{{content}}
+			</section>
+			<footer>
+				<div class="tags">
+					{{tags separator=' · ' prefix='- ' suffix=' -'}}
+				</div>
+				<div class="author">
+					{{#author}}
+						{{#if profile_image}}<img class="author-image" src="{{profile_image}}" alt="Author image" />{{/if}}
+						<address itemprop="author" itemscope itemtype="http://schema.org/Person"><a itemprop="name" href="{{url}}" rel="author">{{name}}</a></address>
+					{{/author}}
+				</div>
+			</footer>
+		</article>
+	</div>
+</section>
+<nav id="pagination">
+	<div class="container">
+		{{#next_post}}
+			<div class="newer-posts">&larr; <a href="{{url}}">{{title}}</a></div>
+		{{else}}
+			<div class="newer-posts"><span class="grey">&larr; Newest Post</span></div>
+		{{/next_post}}
+			<div class="go-back"><a href="{{@blog.url}}">Go Back</a></div>
+		{{#prev_post}}
+			<div class="older-posts"><a href="{{url}}">{{title}}</a> &rarr;</div>
+		{{else}}
+			<div class="older-posts"><span class="grey">Oldest Post &rarr;</span></div>
+		{{/prev_post}}
+	</div>
+</nav>
+{{/post}}

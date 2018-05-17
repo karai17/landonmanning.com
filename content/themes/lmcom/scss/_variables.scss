@@ -1,0 +1,86 @@
+/* Responsive Sizes */
+$xs:  320px; /* iPhone 5   */
+$sm:  360px; /* 720p Phone */
+$md:  768px; /* iPad       */
+$lg: 1024px; /* iPad Pro   */
+$xl: 1200px; /* Desktop    */
+
+/* General Site */
+$font-family: "Noto Sans", "Liberation Sans", -apple-system, "Helvetica Neue", Arial, sans-serif;
+$circle:           999px;
+$viewport-height:  637px;
+$spacing:           15px;
+$padding:   $spacing * 2;
+$indent:    $spacing * 3;
+$transition:        0.5s;
+$bold:               700;
+$shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+
+/* Shading */
+$lighten: rgba(255, 255, 255, 0.5);
+$darken:  rgba(  0,   0,   0, 0.5);
+
+/* Color */
+$black:       #000000;
+$obsidian:    #131313;
+$charcoal:    #1c1c1c;
+$grey-dark:   #777777;
+$grey-medium: #a7a7a7;
+$grey-light:  #e7e7e7;
+$white:       #ffffff;
+
+/* Home Icon */
+$home-icon-radius:  $circle;
+$home-icon-size:    100px;
+$home-icon-padding:  25px;
+
+
+/* Home Icon */
+$service-icon-size: 200px;
+
+/* Social */
+$social-radius:    $circle;
+$social-size:         50px;
+$social-padding:      12px;
+$github:         #515151;
+$twitter:        #00aced;
+
+/* Top */
+$header-height: 40px;
+
+/* Form */
+$form-font-family: $font-family;
+
+$button-border-top:       none;
+$button-border-right:     $button-border-top;
+$button-border-bottom:    $button-border-top;
+$button-border-left:      $button-border-top;
+$button-color:            $obsidian;
+$button-color-hover:      $obsidian;
+$button-padding:          $spacing / 2;
+$button-radius:           3px;
+$button-text-color:       $white;
+$button-text-color-hover: $white;
+$button-text-size:        1.2em;
+
+$input-border-top:          none;
+$input-border-right:        $input-border-top;
+$input-border-bottom:       $input-border-top;
+$input-border-left:         $input-border-top;
+$input-focus-border-top:    $input-border-top;
+$input-focus-border-right:  $input-border-top;
+$input-focus-border-bottom: $input-border-top;
+$input-focus-border-left:   $input-border-top;
+$input-color:               $white;
+$input-margin:              $spacing;
+$input-padding:             5px 8px;
+$input-radius:              $button-radius;
+$input-text-color:          $black;
+
+$placeholder-text-color: $grey-medium;
+
+$textarea-height: 173px;
+
+/* Hamburger */
+$hamburger-menu-width: 200px;
+$hamburger-text-size:  1.2em;

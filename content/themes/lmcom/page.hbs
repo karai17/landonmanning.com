@@ -1,0 +1,19 @@
+{{!< default}}
+<div id="buffer"></div>
+{{#post}}
+<section id="posts">
+	<div class="container">
+		<article itemscope itemtype="http://schema.org/Article" class="post">
+			<header>
+				{{#if feature_image}}
+					<a href="{{url}}"><img itemprop="image" class="feature-image" src="{{feature_image}}" alt="" /></a>
+				{{/if}}
+				<h1 itemprop="name">{{title}}</h1>
+			</header>
+			<section itemprop="articleSection">
+				{{content}}
+			</section>
+		</article>
+	</div>
+</section>
+{{/post}}

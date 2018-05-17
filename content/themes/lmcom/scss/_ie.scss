@@ -1,0 +1,15 @@
+/* IE 10 & 11 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	/* IE has crazy jitter when scrolling with fixed elements */
+	#splash {
+		background-attachment: scroll !important;
+	}
+
+	#home-services {
+		.services {
+			.service {
+				flex-basis: auto !important;
+			}
+		}
+	}
+}

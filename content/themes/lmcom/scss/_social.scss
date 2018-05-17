@@ -1,0 +1,30 @@
+.contact-social {
+	box-shadow: $shadow;
+
+	border-radius: $social-radius;
+
+	display: inline-block;
+
+	padding: $social-padding;
+
+	width:  $social-size;
+	height: $social-size;
+}
+
+.contact-github {
+	@extend .contact-social;
+	background-color: $github;
+
+	&::before {
+		@extend .svg-github;
+	}
+}
+
+.contact-twitter {
+	@extend .contact-social;
+	background-color: $twitter;
+
+	&::before {
+		@extend .svg-twitter;
+	}
+}

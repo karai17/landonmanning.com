@@ -1,0 +1,18 @@
+<article itemscope itemtype="http://schema.org/Article" class="post">
+	<header>
+		{{#if feature_image}}
+			<a href="{{url}}"><img itemprop="image" class="feature-image" src="{{feature_image}}" alt="" /></a>
+		{{/if}}
+		<h2 itemprop="name"><a href="{{url}}">{{title}}</a></h2>
+		<div>Posted on <time itemprop="datePublished" datetime="{{date format='YYYY-MM-DD'}}">{{date format='YYYY-MM-DD'}}</time></div>
+	</header>
+	<section itemprop="articleSection">
+		{{content words='250'}}
+		<div class="read-more"><a href="{{url}}">Read More</a> &rarr;</div>
+	</section>
+	<footer>
+		<div class="tags">
+			{{tags separator=' · ' prefix='- ' suffix=' -'}}
+		</div>
+	</footer>
+</article>
