@@ -2,7 +2,6 @@
 @media only screen and (min-width: $md) {
 	main {
 		margin-bottom: 82px;
-		border-bottom: 3px solid $tertiary;
 	}
 
 	.container {
@@ -30,6 +29,7 @@
 	}
 
 	.post {
+		border-radius: $post-radius;
 		margin-bottom: $padding;
 
 		& > * {
@@ -37,9 +37,8 @@
 		}
 
 		header {
-			.feature-image, .profile-image {
-				margin-bottom: $padding;
-			}
+			border-top-left-radius:  $post-radius;
+			border-top-right-radius: $post-radius;
 		}
 
 		section {
@@ -49,15 +48,10 @@
 		}
 
 		footer {
+			border-bottom-left-radius:  $post-radius;
+			border-bottom-right-radius: $post-radius;
+
 			padding-top: $padding;
-
-			.author {
-				margin-top: $padding;
-
-				.author-image {
-					margin-bottom: $padding;
-				}
-			}
 		}
 	}
 }

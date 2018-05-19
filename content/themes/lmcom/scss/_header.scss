@@ -1,6 +1,6 @@
 #header {
 	background-color: $primary;
-	box-shadow:       0px 3px 0px $tertiary;;
+	box-shadow:       0px 2px 0px $tertiary;;
 
 	color: $secondary;
 
@@ -38,6 +38,7 @@
 		}
 
 		span {
+			color: $secondary;
 			font-family:     "Trebuchet MS";
 			font-size:       1.15em;
 			font-variant:    small-caps;
@@ -59,7 +60,7 @@
 				display:     flex;
 				align-items: center;
 				height: $header-height;
-				transition: 0.15s;
+				transition: 0.2s;
 
 				&:hover {
 					background-color: lighten($primary, 7.5%);

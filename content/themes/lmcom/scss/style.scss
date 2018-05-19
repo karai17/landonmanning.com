@@ -6,11 +6,6 @@
 @import "header";
 @import "footer";
 @import "hamburger";
-@import "form";
-@import "icon";
-@import "social";
-@import "table";
-@import "ie";
 
 body {
 	background-color: $primary;
@@ -18,21 +13,22 @@ body {
 
 a {
 	color: $secondary;
+	text-decoration-color: $tertiary;
+	text-decoration-style: dashed;
+	transition: 0.2s;
+
+	&:hover {
+		color: $tertiary;
+		text-decoration: none;
+	}
 }
 
 p {
 	text-align: justify;
-
-	padding-bottom: $spacing;
-
-	&:last-of-type {
-		padding-bottom: 0;
-	}
 }
 
 ol {
 	padding-left:  $indent;
-	margin-bottom: $spacing;
 
 	li {
 		line-height: 1.5em;
@@ -41,7 +37,6 @@ ol {
 
 ul {
 	padding-left:  $indent;
-	margin-bottom: $spacing;
 
 	li {
 		list-style:  disc;
@@ -49,8 +44,43 @@ ul {
 	}
 }
 
+mark {
+	background-color: $highlight;
+	border-radius:    3px;
+
+	color:  $black;
+
+	padding: 0 3px;
+}
+
+code:not([class]) {
+	background-color: $code;
+	border-radius:    3px;
+
+	padding: 0 3px;
+}
+
+pre {
+	box-shadow: inset 0px -1px 0px 1px lighten($primary, 10%), inset 0px 1px 0px 1px darken($primary, 10%);
+	white-space: pre;
+}
+
+pre:not([class]) {
+	background-color: #272822;
+	border-radius:    0.3em;
+
+	margin:  0.5em 0;
+	padding: 1em;
+
+	code {
+		background-color: #272822;
+		border:           none;
+	}
+}
+
 main {
 	background-color: $obsidian;
+	box-shadow:       0px 2px 0px $tertiary;
 
 	position: relative;
 	z-index:  1;
@@ -62,19 +92,21 @@ main {
 	flex-direction: column;
 
 	margin:    0 auto;
-	padding:   $spacing;
 	width:     100%;
 	max-width: $xl;
 }
 
 .nav-current {
 	background-color: lighten($primary, 7.5%);
-	border-bottom:    3px solid $tertiary;
+	box-shadow:       inset 0px -2px 0px $tertiary;
 
 	color: $tertiary;
 }
 
 #posts {
+	background-color: $obsidian;
+	width: 100%;
+
 	&::before {
 		content: "";
 		display: block;
@@ -82,9 +114,6 @@ main {
 		width:  100%;
 		height: $header-height;
 	}
-
-	background-color: $obsidian;
-	width: 100%;
 }
 
 #pagination {
@@ -109,7 +138,6 @@ main {
 
 .post {
 	background-color: $primary;
-	border-radius:    4px;
 	box-shadow:       $shadow;
 
 	color: $secondary;
@@ -118,7 +146,7 @@ main {
 	flex-direction: column;
 	align-items:    center;
 
-	margin-bottom: $spacing;
+	margin-bottom: $padding;
 
 	width: 100%;
 
@@ -132,9 +160,6 @@ main {
 
 	header {
 		background-image: linear-gradient(rgba(lighten($primary, 10%), 0.65), rgba($primary, 0.85)), url("../images/carbon.png");
-
-		border-top-left-radius:  4px;
-		border-top-right-radius: 4px;
 
 		border-top:    1px solid lighten($primary, 10%);
 		border-bottom: 2px solid darken($primary, 10%);
@@ -153,11 +178,34 @@ main {
 		div {
 			text-align: center;
 		}
+	}
 
-		.feature-image {
+	section {
+		width: 100%;
+
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: $padding;
+		}
+
+		img {
 			display: block;
 			margin: 0 auto;
-			margin-bottom: $spacing;
+		}
+
+		iframe {
+			display: block;
+
+			margin-right: auto;
+			margin-left:  auto;
+
+			max-width: 100%;
+		}
+
+		pre {
+			code {
+				display: block;
+				width: 100%;
+			}
 		}
 
 		.profile-image {
@@ -170,36 +218,14 @@ main {
 			margin: 0 auto;
 			margin-bottom: $spacing;
 		}
-	}
 
-	section {
-		width: 100%;
+		.kg-card-markdown {
+			& > * {
+				margin-bottom: $spacing;
+			}
 
-		a {
-			color: $tertiary;
-		}
-
-		img {
-			display: block;
-			margin: 0 auto;
-		}
-
-		iframe {
-			display: block;
-
-			margin-right:  auto;
-			margin-bottom: $spacing;
-			margin-left:   auto;
-
-			max-width: 100%;
-		}
-
-		pre {
-			margin-bottom: $spacing;
-
-			code {
-				display: block;
-				width: 100%;
+			& > *:last-child {
+				margin-bottom: 0;
 			}
 		}
 
@@ -212,38 +238,13 @@ main {
 	footer {
 		background-image: linear-gradient(rgba($primary, 0.85), rgba($obsidian, 0.9)), url("../images/carbon.png");
 
-		border-bottom-left-radius:  4px;
-		border-bottom-right-radius: 4px;
-
 		border-top: 1px solid lighten($primary, 10%);
 		box-shadow: 0px -2px 0px darken($primary, 10%);
 
-		display:     flex;
-		flex-direction: column;
-		align-items: center;
+		text-align: center;
 
 		padding-top: $spacing;
 		width:       100%;
-
-		.author {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-
-			margin-top: $spacing;
-
-			.author-image {
-				border: 1px solid $black;
-				border-radius: $circle;
-
-				margin-bottom: $spacing;
-				width: 64px;
-			}
-
-			address {
-				font-style: normal;
-			}
-		}
 	}
 }
 
