@@ -585,6 +585,8 @@ main {
       text-align: center; }
   .post section {
     width: 100%; }
+    .post section * {
+      max-width: 100%; }
     .post section h1, .post section h2, .post section h3, .post section h4, .post section h5, .post section h6 {
       margin-top: 30px; }
     .post section img {
@@ -593,8 +595,7 @@ main {
     .post section iframe {
       display: block;
       margin-right: auto;
-      margin-left: auto;
-      max-width: 100%; }
+      margin-left: auto; }
     .post section pre code {
       display: block;
       width: 100%; }
@@ -602,8 +603,8 @@ main {
       border: 2px solid #000000;
       border-radius: 999px;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
-      display: block;
-      margin: 0 auto;
+      margin-bottom: 15px; }
+    .post section .feature-image {
       margin-bottom: 15px; }
     .post section .kg-card-markdown > * {
       margin-bottom: 15px; }

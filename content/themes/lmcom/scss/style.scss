@@ -183,6 +183,10 @@ main {
 	section {
 		width: 100%;
 
+		* {
+			max-width: 100%;
+		}
+
 		h1, h2, h3, h4, h5, h6 {
 			margin-top: $padding;
 		}
@@ -197,8 +201,6 @@ main {
 
 			margin-right: auto;
 			margin-left:  auto;
-
-			max-width: 100%;
 		}
 
 		pre {
@@ -213,9 +215,10 @@ main {
 			border-radius: $circle;
 			box-shadow:    $shadow;
 
-			display: block;
+			margin-bottom: $spacing;
+		}
 
-			margin: 0 auto;
+		.feature-image {
 			margin-bottom: $spacing;
 		}
 

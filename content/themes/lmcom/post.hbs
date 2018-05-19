@@ -8,6 +8,7 @@
 				<div>Posted on <time itemprop="datePublished" datetime="{{date format='YYYY-MM-DD'}}">{{date format='YYYY-MM-DD'}}</time></div>
 			</header>
 			<section itemprop="articleSection">
+				{{#if feature_image}}<img itemprop="image" class="feature-image" src="{{feature_image}}" alt="" />{{/if}}
 				{{content}}
 			</section>
 			<footer>
