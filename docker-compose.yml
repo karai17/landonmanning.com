@@ -12,8 +12,11 @@ services:
       database__connection__filename: "content/data/ghost.db"
       url: https://landonmanning.com
 
-      # url: http://localhost:2368
-      # NODE_ENV: development
+    # Development
+    #   url: http://localhost:2808
+    #   NODE_ENV: development
+    # ports:
+    #   - 2808:2368
 
 networks:
   default:
